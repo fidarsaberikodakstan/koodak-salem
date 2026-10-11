@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f3f8ff"><meta name="description" content="کودک سالم؛ برنامهٔ آموزشی کودکان و سامانهٔ مرکزی کودکستان">
+<link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="style.css">
+<title>کودک سالم | کودکستان</title>
+</head>
+<body>
+<header class="topbar">
+ <a class="brand" href="#" aria-label="کودک سالم"><span class="brand-logo">🌱</span><span><b>کودک سالم</b><small>سامانهٔ آموزشی کودکستان</small></span></a>
+ <nav class="main-nav"><button class="nav-btn active" data-view="child">اپلیکیشن کودک</button><button class="nav-btn" data-view="admin">سامانهٔ مرکزی</button><button class="nav-btn" data-view="parents">والدین</button></nav>
+ <div class="head-actions"><select id="lang" aria-label="زبان"><option value="fa">فارسی</option><option value="ps">پښتو</option><option value="en">English</option></select><span class="online-pill"><i></i> نسخهٔ آزمایشی</span></div>
+</header>
+<main>
+<section id="childView" class="view active">
+ <section class="hero">
+  <div class="hero-copy"><span class="eyebrow">🌈 دنیای رنگارنگ یادگیری</span><h1 id="heroTitle">سلام قهرمان کوچک!</h1><p id="heroText">با بازی، قصه، صدا و تصویر، هر روز چیز تازه‌ای یاد بگیر.</p><button class="btn primary" id="goLessons">شروع یادگیری <span>←</span></button>
+  <div class="stats"><div><b>⭐ <span id="starCount">۱۲</span></b><small>ستاره‌های من</small></div><div><b>📚 <span id="doneCount">۰</span></b><small>درس تکمیل‌شده</small></div><div><b>🎯 ۳</b><small>نشان یادگیری</small></div></div></div>
+  <div class="hero-illustration"><span class="sun">☀️</span><span class="rainbow">🌈</span><span class="book">📚</span><span class="bear">🧸</span><span class="grass"></span></div>
+ </section>
+ <section class="section" id="lessonSection"><div class="section-head"><div><span class="eyebrow">مسیر یادگیری</span><h2>چه چیزی یاد بگیریم؟</h2></div><span class="muted">درس‌های کوتاه و سرگرم‌کننده</span></div>
+ <div class="filters"><button class="chip active" data-filter="all">همه</button><button class="chip" data-filter="religion">آموزش دینی</button><button class="chip" data-filter="language">زبان‌ها</button><button class="chip" data-filter="science">علوم و ریاضی</button><button class="chip" data-filter="life">مهارت‌های زندگی</button></div>
+ <div id="lessonGrid" class="lesson-grid"></div></section>
+ <section class="bottom-grid"><article class="panel"><div class="panel-head"><span class="big-icon">🏆</span><div><h3>پیشرفت من</h3><p>آفرین! هر روز یک چیز تازه یاد بگیر.</p></div></div><div class="progress"><span id="progressBar"></span></div><div class="progress-caption"><span>هدف یادگیری</span><b id="progressText">۰٪</b></div><div class="badges"><span>🌟 کنجکاو</span><span>📖 قصه‌دوست</span><span>🎯 با‌تمرکز</span></div></article>
+ <article class="panel"><div class="panel-head"><span class="big-icon">👨‍👩‍👧</span><div><h3>گوشهٔ خانواده</h3><p>همراه پیشرفت فرزندتان باشید.</p></div></div><p class="muted small">گزارش‌های واقعی پس از اتصال پایگاه داده و حساب والدین فعال می‌شوند.</p><button class="btn secondary full" data-view="parents">مشاهدهٔ بخش والدین</button></article></section>
+</section>
+
+<section id="adminView" class="view">
+ <div class="admin-hero"><div><span class="eyebrow">پنل مدیریت</span><h1>سامانهٔ مرکزی «کودکستان»</h1><p>مدیریت درس‌ها، زبان‌ها، سطح‌ها و محتوای آموزشی در یک محل.</p></div><span class="admin-emoji">🧑‍🏫</span></div>
+ <div class="notice warn">🔐 <span><b>حالت نمایشی:</b> این نسخه برای آزمایش رابط کاربری است. پیش از استفادهٔ واقعی، ورود امن و نقش‌های مدیر/معلم باید به پایگاه داده متصل شوند. اطلاعات این نسخه فقط در همین مرورگر ذخیره می‌شوند.</span></div>
+ <div class="admin-stats"><div class="metric"><span>📚</span><small>مجموع درس‌ها</small><b id="adminLessonCount">۰</b></div><div class="metric"><span>🌍</span><small>زبان‌ها</small><b>۳</b></div><div class="metric"><span>🧒</span><small>گروه‌های سنی</small><b>۴</b></div><div class="metric"><span>⭐</span><small>درس‌های فعال</small><b id="activeLessonCount">۰</b></div></div>
+ <div class="admin-layout"><aside class="side-panel"><h3>مدیریت محتوا</h3><button class="side-link selected" data-admin-tab="lessons">📘 درس‌ها</button><button class="side-link" data-admin-tab="curriculum">🗂️ برنامهٔ درسی</button><button class="side-link" data-admin-tab="roles">👥 کاربران و دسترسی‌ها</button><button class="side-link" data-admin-tab="reports">📈 گزارش پیشرفت</button><button class="side-link" data-admin-tab="settings">⚙️ تنظیمات</button></aside>
+ <div class="admin-content">
+ <div id="adminLessons" class="admin-tab active"><div class="content-head"><div><h2>مدیریت درس‌ها</h2><p>درس بساز، ویرایش کن یا از نمایش کودک پنهان کن.</p></div><button class="btn primary" id="addLesson">＋ افزودن درس</button></div><div class="table-wrap"><table><thead><tr><th>درس</th><th>موضوع</th><th>سن</th><th>زبان‌ها</th><th>وضعیت</th><th>عملیات</th></tr></thead><tbody id="adminLessonRows"></tbody></table></div></div>
+ <div id="adminCurriculum" class="admin-tab"><h2>برنامهٔ آموزشی</h2><p>درس‌ها بر اساس سن و سطح یادگیری گروه‌بندی می‌شوند.</p><div class="curriculum-grid"><div><b>🌱 ۳–۶ سال</b><p>آشنایی، تصویر، صدا، بازی و مهارت‌های اولیه</p></div><div><b>🌼 ۷–۹ سال</b><p>خواندن، نوشتن، عددها و مفاهیم دینی پایه</p></div><div><b>🌳 ۱۰–۱۲ سال</b><p>درک مفاهیم، تمرین و حل مسئله</p></div><div><b>🚀 ۱۳–۱۵ سال</b><p>موضوعات پیشرفته، پروژه و تفکر انتقادی</p></div></div><div class="notice">📌 هر درس باید زبان، سطح، سن پیشنهادی، محتوای آموزشی و شیوهٔ سنجش داشته باشد.</div></div>
+ <div id="adminRoles" class="admin-tab"><h2>کاربران و دسترسی‌ها</h2><div class="role-cards"><div><span>👑</span><b>مدیر اصلی</b><p>دسترسی کامل به درس‌ها، کاربران، تنظیمات و گزارش‌ها.</p></div><div><span>🧑‍🏫</span><b>معلم</b><p>دسترسی فقط به درس‌ها و گروه‌هایی که مدیر تعیین می‌کند.</p></div><div><span>👨‍👩‍👧</span><b>والدین</b><p>مشاهدهٔ گزارش فرزند خود، بدون دسترسی به اطلاعات دیگران.</p></div><div><span>🧒</span><b>کودک</b><p>مشاهدهٔ درس‌های مناسب سن و پیشرفت خودش.</p></div></div><div class="notice warn">حساب‌های واقعی و احراز هویت هنوز فعال نیستند؛ هیچ رمز واقعی در این نسخه وارد نکنید.</div></div>
+ <div id="adminReports" class="admin-tab"><h2>گزارش پیشرفت</h2><p>نمونهٔ شاخص‌هایی که پس از اتصال پایگاه داده گزارش خواهند شد:</p><div class="report-list"><div>درس‌های تکمیل‌شده <b>پس از اتصال داده‌ها</b></div><div>زمان یادگیری <b>پس از اتصال داده‌ها</b></div><div>پیشرفت هر موضوع و زبان <b>پس از اتصال داده‌ها</b></div><div>گزارش هفتگی برای والدین <b>پس از اتصال داده‌ها</b></div></div></div>
+ <div id="adminSettings" class="admin-tab"><h2>تنظیمات سامانه</h2><label class="field-label">نام سامانه<input value="کودکستان" id="systemName"></label><label class="field-label">نام اپلیکیشن کودک<input value="کودک سالم" id="appName"></label><label class="field-label">زبان‌های فعال<input value="فارسی، پشتو، انگلیسی" readonly></label><button class="btn primary" id="saveSettings">ذخیرهٔ تنظیمات نمایشی</button><p class="muted small">تنظیمات در همین مرورگر ذخیره می‌شوند.</p></div>
+ </div></div>
+</section>
+
+<section id="parentsView" class="view">
+ <div class="admin-hero"><div><span class="eyebrow">همراهی خانواده</span><h1>گزارش والدین</h1><p>محیطی برای پیگیری یادگیری و تشویق کودک.</p></div><span class="admin-emoji">👨‍👩‍👧</span></div>
+ <div class="notice warn">این بخش در نسخهٔ فعلی نمایشی است؛ برای نمایش گزارش خصوصی هر کودک، حساب والدین و اتصال امن پایگاه داده لازم است.</div>
+ <div class="parent-cards"><article class="panel"><span class="big-icon">📚</span><h3>درس‌های انجام‌شده</h3><p>در نسخهٔ کامل به‌صورت خودکار ثبت می‌شود.</p></article><article class="panel"><span class="big-icon">⭐</span><h3>امتیاز و نشان‌ها</h3><p>تشویق مثبت برای استمرار یادگیری.</p></article><article class="panel"><span class="big-icon">🛡️</span><h3>حریم خصوصی</h3><p>والدین فقط به اطلاعات فرزند خود دسترسی خواهند داشت.</p></article></div>
+</section>
+</main>
+<footer><b>🌱 کودک سالم</b><span>یادگیری امن، شاد و چندزبانه برای کودکان</span><span>نسخهٔ آغازین — ۲۰۲۶</span></footer>
+
+<dialog id="lessonDialog" class="dialog"><button class="close" data-close="lessonDialog">×</button><div class="dialog-icon" id="lessonEmoji">🌟</div><span class="eyebrow">درس تعاملی</span><h2 id="lessonTitle"></h2><p id="lessonDescription"></p><div id="lessonSteps" class="steps"></div><div class="quiz" id="quizBox"></div><button class="btn primary full" id="finishLesson">تکمیل درس و دریافت ستاره ⭐</button><small class="muted">محتوای دینی نمونه است و پیش از انتشار باید توسط عالم آگاه به فقه حنفی بازبینی شود.</small></dialog>
+<dialog id="lessonEditor" class="dialog editor"><button class="close" data-close="lessonEditor">×</button><span class="eyebrow">سامانهٔ مرکزی</span><h2 id="editorTitle">افزودن درس جدید</h2><form id="lessonForm">
+<label class="field-label">عنوان درس<input id="fTitle" required maxlength="100" placeholder="مثلاً آشنایی با وضو"></label>
+<label class="field-label">توضیح کوتاه<textarea id="fDescription" required rows="2" maxlength="300"></textarea></label>
+<div class="form-row"><label class="field-label">موضوع<select id="fCategory"><option value="religion">آموزش دینی</option><option value="language">زبان‌ها</option><option value="science">علوم و ریاضی</option><option value="life">مهارت‌های زندگی</option></select></label><label class="field-label">گروه سنی<select id="fAge"><option>۳–۶</option><option>۷–۹</option><option>۱۰–۱۲</option><option>۱۳–۱۵</option></select></label></div>
+<label class="field-label">مراحل درس (هر مرحله در یک خط)<textarea id="fSteps" rows="4" required placeholder="مرحلهٔ اول&#10;مرحلهٔ دوم"></textarea></label>
+<label class="field-label">زبان‌های موجود<div class="checks"><label><input type="checkbox" value="fa" checked> فارسی</label><label><input type="checkbox" value="ps" checked> پشتو</label><label><input type="checkbox" value="en" checked> انگلیسی</label></div></label>
+<label class="field-label check-single"><input id="fActive" type="checkbox" checked> نمایش درس در اپلیکیشن کودک</label>
+<div class="form-actions"><button type="button" class="btn secondary" data-close="lessonEditor">انصراف</button><button class="btn primary" type="submit">ذخیرهٔ درس</button></div></form></dialog>
+<div id="toast" role="status" class="toast"></div>
+<script src="app.js"></script>
+</body></html>

@@ -1,0 +1,9 @@
+{
+  "name": "کودک سالم | کودکستان",
+  "short_name": "کودک سالم",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f6f9fe",
+  "theme_color": "#f3f8ff",
+  "description": "برنامهٔ آموزشی چندزبانهٔ کودکان"
+}
